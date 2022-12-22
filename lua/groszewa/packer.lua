@@ -1,7 +1,11 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
-vim.cmd.packadd('packer.nvim')
+--if(os.getenv('GROSZEWA_VPC')) then
+--    vim.cmd.packadd('packer.nvim')
+--else
+--    vim.cmd [[packadd packer.nvim]]
+--end
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
@@ -40,13 +44,15 @@ return require('packer').startup(function(use)
       -- or                            , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
   })
-  use({
-      'rose-pine/neovim',
-      as = 'rose-pine',
-      config = function()
-          vim.cmd('colorscheme rose-pine')
-      end
-  })
+  if(not os.getenv('GROSZEWA_VPC')) then
+      use({
+          'rose-pine/neovim',
+          as = 'rose-pine',
+          config = function()
+              vim.cmd('colorscheme rose-pine')
+          end
+      })
+  end
 end)
 
 -- Note: vim-be-good needs to be installed manually for some reason...
