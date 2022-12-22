@@ -1,5 +1,5 @@
 vim.g.mapleader= " "
-if(os.getenv('GROSZEWA_VPC')) then
+if(not os.getenv('GROSZEWA_VPC')) then
     vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 end
 
