@@ -6,13 +6,14 @@ vim.cmd.packadd('packer.nvim')
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use('wbthomason/packer.nvim')
+  use('BurntSushi/ripgrep')
   use('folke/tokyonight.nvim')
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-  -- use('ThePrimeagen/vim-be-good.nvim')
+  use('theprimeagen/vim-be-good')
   use {
       'VonHeikemen/lsp-zero.nvim',
       requires = {
