@@ -1,4 +1,6 @@
-local lsp = require('lsp-zero')
+if(not os.getenv('GROSZEWA_VPC')) then
+    local lsp = require('lsp-zero')
 
-lsp.preset('recommended')
-lsp.setup()
+    lsp.preset('recommended')
+    lsp.setup()
+end
