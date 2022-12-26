@@ -20,5 +20,8 @@ require('telescope').setup{
     git_files = {
         disable_devicons=true
     },
+    grep_string = {
+        disable_devicons=true
+    },
   },
 }
