@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
   })
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use 'nvim-tree/nvim-web-devicons'
+  use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
   if(not os.getenv('GROSZEWA_VPC')) then
       use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
       use('nvim-treesitter/playground')
