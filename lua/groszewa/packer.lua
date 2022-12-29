@@ -1,4 +1,4 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
 
 -- Only required if you have packer configured as `opt`
 --if(os.getenv('GROSZEWA_VPC')) then
@@ -20,9 +20,10 @@ return require('packer').startup(function(use)
   })
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-  use 'nvim-tree/nvim-web-devicons'
+  use('nvim-tree/nvim-web-devicons')
   use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
-  use 'preservim/nerdtree'
+  use ('preservim/nerdtree')
+  use('jeffkreeftmeijer/vim-numbertoggle')
   if(not os.getenv('GROSZEWA_VPC')) then
       use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
       use('nvim-treesitter/playground')
