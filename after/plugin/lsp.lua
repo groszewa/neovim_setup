@@ -4,12 +4,11 @@ if(not os.getenv('GROSZEWA_VPC')) then
     lsp.preset('recommended')
 
     lsp.ensure_installed({
-        'sumneko_lua',
         'rust_analyzer',
     })
 
     -- Fix undefined global 'vim'
-    lsp.configure('sumneko_lua', {
+    lsp.configure('lua-language-server', {
         settings = {
             Lua = {
                 diagnostics = {
