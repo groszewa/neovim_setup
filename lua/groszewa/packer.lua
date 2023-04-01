@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
       use('nvim-treesitter/playground')
       use {
           'VonHeikemen/lsp-zero.nvim',
+          branch = 'v1.x',
           requires = {
               -- LSP Support
               {'neovim/nvim-lspconfig'},
